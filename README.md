@@ -70,3 +70,14 @@ Una vez tenemos la aplicación funcionando en OpenShift, para poder subirlo a Gi
 ![practica01_clone](https://dl.dropboxusercontent.com/s/6qg5x6usi6h7ews/clone.png)
 
 La última parte de la práctica consistirá en crear un nuevo proyecto bajo licencia GNU GPL v3, que será donde subamos los archivos de nuestra aplicación.
+Nos situamos en la carpeta local de nuestro proyecto e introducimos los siguientes comandos:
+
+```
+git remote add github git@github.com:germaaan/PRACTICA_01.git
+git add .
+git commit -a -m "Subida Practica 1"
+git pull github master
+git push github master
+```
+
+Si después de realizar el `git pull` obtuvieramos algún conflicto por diferencia de versiones, deberemos resolver el conflicto editando el archivo con el problema en cuestión, volvemos a hacer `git commit`, y finalmente `git push`.
